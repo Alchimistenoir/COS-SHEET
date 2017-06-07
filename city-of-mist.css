@@ -1,0 +1,1405 @@
+@font-face {
+    font-family: 'Roboto Condensed', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+}
+
+.sheet-hidden {
+    display: none;
+}
+
+.sheet-power_value {
+    width: 20px;
+    position: absolute;
+    right: 0;
+}
+
+.sheet-logo {
+    background: url('http://i.imgur.com/L4BbjhX.jpg') no-repeat;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+
+.sheet-label {
+    text-transform: uppercase;
+}
+
+.sheet-label_small {
+    font-size: 0.75rem;
+}
+
+/*MOVES GRID ------------------------------------------------------------------ START*/
+
+.sheet-move_button {
+    width: 120px;
+    height: 40px;
+    padding: 0px;
+    background: lightgrey;
+    border: solid;
+    border-width: 1px;
+    border-color: darkgrey;
+    border-radius: 5px;
+    flex-shrink: 1;
+    margin: 1%;
+}
+
+.sheet-move_button {
+    font-size: 0.75em;
+}
+
+.sheet-move_button:hover {
+}
+
+.sheet-move_button:active {
+    background: white;
+}
+
+.sheet-move_button:before {
+    content: "" !important;
+    font-size: 0.75em;
+    display: none;
+}
+
+.sheet-move_button label{
+    text-transform: uppercase;
+    font-size: 0.75em;
+}
+
+/*CLEAR BUTTON ---------------------------------------------------------------- START*/
+
+.sheet-clear_check {
+    opacity: 0;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sheet-clear_button {
+    width: 100%;
+    height: 28px;
+    background: lightgrey;
+    border: solid;
+    border-width: 1px;
+    border-color: darkgrey;
+    border-radius: 5px;
+    top: 0px;
+    right: 100%;
+}
+
+.sheet-clear_button:active {
+    background: white;
+}
+
+.sheet-clear_label{
+    position: relative;
+    bottom: 22px;
+}
+
+/*CLEAR BUTTON ---------------------------------------------------------------- END*/
+
+/*CHECKBOX FORMATING ---------------------------------------------------------- START*/
+
+/* ATTENTION */
+.sheet-attention input[type="checkbox"]
+{
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 0px;
+    left: 10px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.sheet-attention input[type="checkbox"] + span::before
+{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(http://i.imgur.com/0B5IM2U.png);
+    background-size: 20px 20px;
+}
+
+.sheet-attention input[type="checkbox"] + span::before
+{
+    content: url(http://i.imgur.com/0B5IM2U.png);
+    width: 20px;
+    height: 20px;
+    font-size: 22px;
+    opacity: 1;
+}
+
+.sheet-attention input[type="checkbox"]:checked + span::before
+{
+    content: url(http://i.imgur.com/83aNNee.png);
+    opacity: 1;
+}
+
+/*CRACK*/
+
+.sheet-crack input[type="checkbox"]
+{
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 0px;
+    left: 10px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.sheet-crack input[type="checkbox"] + span::before
+{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(http://i.imgur.com/sp0cL2Q.png);
+    background-size: 20px 20px;
+}
+
+.sheet-crack input[type="checkbox"] + span::before
+{
+    content: url(http://i.imgur.com/sp0cL2Q.png);
+    width: 20px;
+    height: 20px;
+    font-size: 22px;
+    opacity: 1;
+}
+
+.sheet-crack input[type="checkbox"]:checked + span::before
+{
+    content: url(http://i.imgur.com/VRIy2cV.png);
+    opacity: 1;
+}
+
+/*BURN TAG*/
+
+.sheet-burning input[type="checkbox"]
+{
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 0px;
+    left: 10px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.sheet-burning input[type="checkbox"] + span::before
+{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(http://i.imgur.com/2LgiUcl.png);
+    background-size: 20px 20px;
+}
+
+.sheet-burning input[type="checkbox"] + span::before
+{
+    content: url(http://i.imgur.com/2LgiUcl.png);
+    width: 20px;
+    height: 20px;
+    font-size: 22px;
+    opacity: 1;
+}
+
+.sheet-burning input[type="checkbox"]:checked + span::before
+{
+    content: url(http://i.imgur.com/KkHOPX0.png);
+    opacity: 1;
+}
+
+/*LOGOS*/
+
+.sheet-logos_tag input[type="checkbox"]
+{
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 12px;
+    left: 12px;
+    margin: -12px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.sheet-logos_tag input[type="checkbox"] + span::before
+{
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(http://i.imgur.com/I0skcGW.png);
+    background-size: 24px 24px;
+}
+
+.sheet-logos_tag input[type="checkbox"] + span::before
+{
+    content: url(http://i.imgur.com/I0skcGW.png);
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    opacity: 1;
+}
+
+.sheet-logos_tag input[type="checkbox"]:checked + span::before
+{
+    content: url(http://i.imgur.com/gSuZJUF.png);
+    opacity: 1;
+}
+
+/*MYTHOS*/
+
+.sheet-mythos_tag input[type="checkbox"]
+{
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 12px;
+    left: 12px;
+    margin: -12px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.sheet-mythos_tag input[type="checkbox"] + span::before
+{
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(http://i.imgur.com/Bm6IwIN.png);
+    background-size: 24px 24px;
+}
+
+.sheet-mythos_tag input[type="checkbox"] + span::before
+{
+    content: url(http://i.imgur.com/Bm6IwIN.png);
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    opacity: 1;
+}
+
+.sheet-mythos_tag input[type="checkbox"]:checked + span::before
+{
+    content: url(http://i.imgur.com/gYJjMmy.png);
+    opacity: 1;
+}
+
+/*CHECKBOX FORMATING ----------------------------------------------------------- END*/
+
+/* THEME CARD TOGGLE ----------------------------------------------------------- START */
+
+.sheet-logos_1_card,
+.sheet-logos_2_card,
+.sheet-logos_3_card,
+.sheet-logos_4_card{
+    display: initial;
+}
+
+.sheet-mythos_1_card,
+.sheet-mythos_2_card,
+.sheet-mythos_3_card,
+.sheet-mythos_4_card{
+    display: initial;
+}
+
+.sheet-mythos_1:checked ~ .sheet-logos_1_card,
+.sheet-mythos_2:checked ~ .sheet-logos_2_card,
+.sheet-mythos_3:checked ~ .sheet-logos_3_card,
+.sheet-mythos_4:checked ~ .sheet-logos_4_card{
+    display: none;
+}
+
+.sheet-logos_1:checked ~ .sheet-mythos_1_card,
+.sheet-logos_2:checked ~ .sheet-mythos_2_card,
+.sheet-logos_3:checked ~ .sheet-mythos_3_card,
+.sheet-logos_4:checked ~ .sheet-mythos_4_card{
+    display: none;
+}
+
+/* THEME CARD TOGGLE ----------------------------------------------------------- END */
+
+/*THEME CARD STYLING ----------------------------------------------------------- START*/
+
+.sheet-hand_cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    perspective: 800px;
+    filter: drop-shadow(0px 20px 25px rgba(0,0,0,0.75));
+}
+
+.sheet-hand_status {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    perspective: 1200px;
+    filter: drop-shadow(0px 20px 25px rgba(0,0,0,0.75));
+}
+
+.sheet-card_1 {
+    transform: rotateX(1.5deg) rotateY(3deg) rotateZ(-2.6deg) translateY(-3px) translateX(3px);
+    box-shadow: 3px 10px 20px -3px rgba(0,0,0,0.75);
+    z-index: 3;
+}
+
+.sheet-card_2 {
+    transform: rotateX(2.5deg) rotateY(1deg) rotateZ(-0.6deg) translateY(3px) translateX(0px);
+    box-shadow: 1px 10px 20px -3px rgba(0,0,0,0.75);
+    z-index: 2;
+}
+
+.sheet-card_3 {
+    transform: rotateX(2.5deg) rotateY(0deg) rotateZ(1.2deg) translateY(-1px) translateX(-1px);
+    box-shadow: -1px 10px 20px -3px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+.sheet-card_4 {
+    transform: rotateX(1.5deg) rotateY(-3deg) rotateZ(2deg) translateY(0px) translateX(-5px);
+    box-shadow: -3px 10px 20px -3px rgba(0,0,0,0.75);
+    z-index: 0;
+}
+
+
+.sheet-status_1 {
+    transform: rotateX(1.5deg) rotateY(3deg) rotateZ(2.4deg) translateY(0px) translateX(17px) scale(0.9);
+    box-shadow: 3px 10px 20px -3px rgba(0,0,0,0.75);
+    z-index: 0;
+}
+
+.sheet-status_2 {
+    transform: rotateX(2.5deg) rotateY(0deg) rotateZ(1.0deg) translateY(-1px) translateX(-2px) scale(0.9);
+    box-shadow: 0px 10px 20px -3px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+.sheet-status_3 {
+    transform: rotateX(1.5deg) rotateY(-3deg) rotateZ(-2.0deg) translateY(-3px) translateX(-20px) scale(0.9);
+    box-shadow: 3px 10px 20px -3px rgba(0,0,0,0.75);
+    z-index: 3;
+}
+
+.sheet-theme_card {
+    width: 215px;
+    float: left;
+    flex-shrink: 1;
+}
+
+.sheet-card_padding {
+    padding: 5px;
+}
+
+.sheet-status_card {
+    width:330px;
+    background-color: #e3ddc5 ;
+    margin: 0.5% 0%;
+    padding: 0.5%;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid white;
+}
+
+.sheet-theme_title {
+    width: 98%;
+    height: 52px;
+    background: transparent;
+    border: none;
+    line-height: 1.0;
+    word-wrap: break-word;
+    word-break: keep-all;
+    overflow:hidden;
+
+	font-family: Impact;
+	font-size: 26px;
+	font-style: italic;
+	font-variant: small-caps;
+	font-weight: 400;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+
+.sheet-theme_label {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.sheet-theme_identity {
+    width: 95%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    line-height: 1.0;
+    word-wrap: break-word;
+    word-break: keep-all;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.sheet-tag_label {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.sheet-vert_space {
+    margin: 5px 0px;
+}
+
+/* MYTHOS STYLING */
+
+.sheet-myt_card {
+    background-color: #755c78 ;
+    margin: 0.5%;
+    padding: 0.5%;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid white;
+}
+
+.sheet-mythos_card {
+    background-color: #7f6790 ;
+    margin: 0.5%;
+    padding: 0.5%;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid white;
+}
+
+.sheet-mythos_header {
+    background-color: #4d2a67 ;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px 10px;
+}
+
+.sheet-mythos_footer {
+    background-color: #4d2a67 ;
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px 5px;
+}
+
+.sheet-mythos_label {
+    color: white;
+}
+
+.sheet-mythos_identity {
+    box-shadow: inset 0px 0px 5px 4px #4d2a67;
+}
+
+/* LOGOS STYLING */
+
+.sheet-logos_card {
+    background-color: #e3ddc5 ;
+    margin: 0.5%;
+    padding: 0.5%;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid white;
+}
+
+.sheet-logos_header {
+    background-color: #924930 ;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px 10px;
+}
+
+.sheet-logos_footer {
+    background-color: #924930 ;
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px 5px;
+}
+
+.sheet-logos_identity {
+    box-shadow: inset 0px 0px 5px 4px #924930;
+}
+
+
+/* THEME CARD STYLING ---------------------------------------------------------- END */
+
+/* GENERAL FORMAT STYLING - START */
+
+.sheet-section {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding: 0 !important;
+
+}
+
+.sheet-line {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between; 
+}
+
+.sheet-stretch {
+    width: 100%;
+}
+
+.sheet-right {
+    float: right;
+}
+
+.sheet-center {
+    margin: auto;
+    text-align: center;
+}
+
+.sheet-middle {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+.sheet-left {
+    float: left;
+}
+
+/* GENERAL FORMAT STYLING - END */
+
+.sheet-com_sheet {
+    background: #fff;
+}
+
+.sheet-weakness input[type=checkbox] {
+    float: left;
+    margin-right: 10px;
+}
+
+.sheet-weakness textarea {
+    width: 78%;
+    float: left;
+}
+
+textarea {
+    resize: none;
+}
+
+label {
+    color: #453428;
+}
+
+textarea {
+    height: 50px;
+}
+
+.sheet-overall_move_grid:after,
+.sheet-header:after {
+    content: '';
+    display: block;
+    clear: both;
+    height:;
+}
+
+.sheet-full_grid {
+    width: 98%;
+}
+
+.sheet-half_grid {
+    width: 48%;
+    margin: 1%;
+    float: left;
+}
+
+.sheet-half_grid .sheet-third_grid {
+    padding: 0;
+}
+
+.sheet-threequarter_grid {
+    width: 73%;
+    float: left;
+}
+
+.sheet-quarter_grid {
+    width: 23%;
+    float: left;
+}
+
+.sheet-third_grid {
+    width: 33%;
+    float: left;
+}
+
+.sheet-overall_move_grid {
+    background: #eee
+}
+
+.sheet-move_grid {
+    width: 12%;
+    float: left;
+    text-align: center;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.sheet-move_grid label {
+    display: block;
+    height: 30px;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.sheet-move_label {
+    text-align: center;
+}
+
+.sheet-total_power label,
+.sheet-total_power {th
+    text-align: right;
+}
+
+.sheet-power-tag {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.sheet-power-tag input[type=text] {
+    margin-bottom: 5px;
+    width: 98%;
+}
+
+.sheet-clr {
+    clear: both;
+    padding: 0 !important;
+}
+
+.sheet-adv {
+    display: block;
+    height: 60px;
+}
+
+input[type=checkbox] {
+    box-shadow: none;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+}
+
+/* BURN TAG TOGGLE ------------------------------------------------------------- START */
+
+.sheet-burned,
+.sheet-burned_1,
+.sheet-burned_2,
+.sheet-burned_3,
+.sheet-burned_4,
+.sheet-burned_5,
+.sheet-burned_6,
+.sheet-burned_7,
+.sheet-burned_8,
+.sheet-burned_9,
+.sheet-burned_10,
+.sheet-burned_11,
+.sheet-burned_12,
+.sheet-burned_13,
+.sheet-burned_14,
+.sheet-burned_15,
+.sheet-burned_16,
+.sheet-burned_17,
+.sheet-burned_18,
+.sheet-burned_19,
+.sheet-burned_20,
+.sheet-burned_21,
+.sheet-burned_22,
+.sheet-burned_23,
+.sheet-burned_24,
+.sheet-burned_25,
+.sheet-burned_26,
+.sheet-burned_27,
+.sheet-burned_28{
+    display: initial;
+}
+
+.sheet-burn,
+.sheet-burn_1,
+.sheet-burn_2,
+.sheet-burn_3,
+.sheet-burn_4,
+.sheet-burn_5,
+.sheet-burn_6,
+.sheet-burn_7,
+.sheet-burn_8,
+.sheet-burn_9,
+.sheet-burn_10,
+.sheet-burn_11,
+.sheet-burn_12,
+.sheet-burn_13,
+.sheet-burn_14,
+.sheet-burn_15,
+.sheet-burn_16,
+.sheet-burn_17,
+.sheet-burn_18,
+.sheet-burn_19,
+.sheet-burn_20,
+.sheet-burn_21,
+.sheet-burn_22,
+.sheet-burn_23,
+.sheet-burn_24,
+.sheet-burn_25,
+.sheet-burn_26,
+.sheet-burn_27,
+.sheet-burn_28{
+    margin-right: 0px;
+}
+
+.sheet-burn:checked ~ .sheet-burned,
+.sheet-burn_1:checked ~ .sheet-burned_1,
+.sheet-burn_2:checked ~ .sheet-burned_2,
+.sheet-burn_3:checked ~ .sheet-burned_3,
+.sheet-burn_4:checked ~ .sheet-burned_4,
+.sheet-burn_5:checked ~ .sheet-burned_5,
+.sheet-burn_6:checked ~ .sheet-burned_6,
+.sheet-burn_7:checked ~ .sheet-burned_7,
+.sheet-burn_8:checked ~ .sheet-burned_8,
+.sheet-burn_9:checked ~ .sheet-burned_9,
+.sheet-burn_10:checked ~ .sheet-burned_10,
+.sheet-burn_11:checked ~ .sheet-burned_11,
+.sheet-burn_12:checked ~ .sheet-burned_12,
+.sheet-burn_13:checked ~ .sheet-burned_13,
+.sheet-burn_14:checked ~ .sheet-burned_14,
+.sheet-burn_15:checked ~ .sheet-burned_15,
+.sheet-burn_16:checked ~ .sheet-burned_16,
+.sheet-burn_17:checked ~ .sheet-burned_17,
+.sheet-burn_18:checked ~ .sheet-burned_18,
+.sheet-burn_19:checked ~ .sheet-burned_19,
+.sheet-burn_20:checked ~ .sheet-burned_20,
+.sheet-burn_21:checked ~ .sheet-burned_21,
+.sheet-burn_22:checked ~ .sheet-burned_22,
+.sheet-burn_23:checked ~ .sheet-burned_23,
+.sheet-burn_24:checked ~ .sheet-burned_24,
+.sheet-burn_25:checked ~ .sheet-burned_25,
+.sheet-burn_26:checked ~ .sheet-burned_26,
+.sheet-burn_27:checked ~ .sheet-burned_27,
+.sheet-burn_28:checked ~ .sheet-burned_28{
+    display: none;
+}
+
+/* BURN TAG TOGGLE ------------------------------------------------------------- END */
+
+.sheet-movedesc {
+    background: #fff;
+    padding: 10px;
+}
+
+.sheet-rolltemplate-com table {
+    width: 98%;
+	border: 1px solid;
+	color: black;
+	font-size: 1em;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.sheet-rolltemplate-com th {
+	background-color: rgba(112, 32, 130,1);
+	color: #ffffff;
+	padding: 5px 10px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+	text-align: left;
+}
+
+.sheet-rolltemplate-com .userscript-tcat {
+	font-weight: bold;
+}
+
+.sheet-rolltemplate-com td {
+	padding: 5px 10px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.sheet-rolltemplate-com tr:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-com tr:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+
+.sheet-rolltemplate-com .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1); /*Cool Gray 6 C*/
+}
+
+.sheet-rolltemplate-com .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-com .inlinerollresult.fullfail {
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-com .inlinerollresult.importantroll {
+	border: 2px solid #4A57ED;
+}
+
+.textchatcontainer .message {
+    padding-left: 10px;
+}
+
+/* STATUS TAG TOGGLE ----------------------------------------------------------- START */
+
+.sheet-stat_6_F:checked ~ .sheet-stat_5,
+.sheet-stat_6_F:checked ~ .sheet-stat_4,
+.sheet-stat_6_F:checked ~ .sheet-stat_3,
+.sheet-stat_6_F:checked ~ .sheet-stat_2,
+.sheet-stat_6_F:checked ~ .sheet-stat_1,
+.sheet-stat_5_E:checked ~ .sheet-stat_4,
+.sheet-stat_5_E:checked ~ .sheet-stat_3,
+.sheet-stat_5_E:checked ~ .sheet-stat_2,
+.sheet-stat_5_E:checked ~ .sheet-stat_1,
+.sheet-stat_4_D:checked ~ .sheet-stat_3,
+.sheet-stat_4_D:checked ~ .sheet-stat_2,
+.sheet-stat_4_D:checked ~ .sheet-stat_1,
+.sheet-stat_3_C:checked ~ .sheet-stat_2,
+.sheet-stat_3_C:checked ~ .sheet-stat_1,
+.sheet-stat_2_B:checked ~ .sheet-stat_1{
+    display: none;
+    
+}
+
+.sheet-stat_5
+.sheet-stat_4,
+.sheet-stat_3,
+.sheet-stat_2,
+.sheet-stat_1{
+    display: inline;
+}
+
+.sheet-stat_6_F:checked ~ .sheet-stat_E,
+.sheet-stat_6_F:checked ~ .sheet-stat_D,
+.sheet-stat_6_F:checked ~ .sheet-stat_C,
+.sheet-stat_6_F:checked ~ .sheet-stat_B,
+.sheet-stat_6_F:checked ~ .sheet-stat_A,
+.sheet-stat_5_E:checked ~ .sheet-stat_D,
+.sheet-stat_5_E:checked ~ .sheet-stat_C,
+.sheet-stat_5_E:checked ~ .sheet-stat_B,
+.sheet-stat_5_E:checked ~ .sheet-stat_A,
+.sheet-stat_4_D:checked ~ .sheet-stat_C,
+.sheet-stat_4_D:checked ~ .sheet-stat_B,
+.sheet-stat_4_D:checked ~ .sheet-stat_A,
+.sheet-stat_3_C:checked ~ .sheet-stat_B,
+.sheet-stat_3_C:checked ~ .sheet-stat_A,
+.sheet-stat_2_B:checked ~ .sheet-stat_A{
+    display: inline;
+}
+
+
+.sheet-stat_F,
+.sheet-stat_E,
+.sheet-stat_D,
+.sheet-stat_C,
+.sheet-stat_B,
+.sheet-stat_A{
+    display: none;
+}
+/* STATUS TAG TOGGLE ----------------------------------------------------------- END */
+
+/* STATUS CARD SPECTRUM -------------------------------------------------------- START */
+
+.sheet-status_grid {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.0);
+    
+}
+
+/* SPECTRUM 1*/
+
+.sheet-spectrum_1 {
+    white-space: nowrap;
+}
+
+.sheet-spectrum_1 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 40px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -20px;
+}
+
+
+.sheet-spectrum_1 input[type="checkbox"] + span::before
+{
+    width: 40px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/0vMVV6y.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-spectrum_1 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(100%) drop-shadow(0px 0px 1px black);
+}
+
+/* SPECTRUM 2*/
+
+.sheet-spectrum_2 {
+    white-space: nowrap;
+}
+
+.sheet-spectrum_2 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 45px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -25px;
+}
+
+
+.sheet-spectrum_2 input[type="checkbox"] + span::before
+{
+    width: 45px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/2fxghce.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-spectrum_2 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(100%) drop-shadow(0px 0px 1px black);
+}
+
+/* SPECTRUM 3*/
+
+.sheet-spectrum_3 {
+    white-space: nowrap;
+}
+
+.sheet-spectrum_3 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 50px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -27px;
+}
+
+
+.sheet-spectrum_3 input[type="checkbox"] + span::before
+{
+    width: 50px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/kyHIHoq.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-spectrum_3 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(100%) drop-shadow(0px 0px 1px black);
+}
+
+/* SPECTRUM 4*/
+
+.sheet-spectrum_4 {
+    white-space: nowrap;
+}
+
+.sheet-spectrum_4 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 55px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -29.5px;
+}
+
+
+.sheet-spectrum_4 input[type="checkbox"] + span::before
+{
+    width: 55px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/xWbiwPh.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-spectrum_4 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(100%) drop-shadow(0px 0px 1px black);
+}
+
+/* SPECTRUM 5*/
+
+.sheet-spectrum_5 {
+    white-space: nowrap;
+}
+
+.sheet-spectrum_5 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -32px;
+}
+
+
+.sheet-spectrum_5 input[type="checkbox"] + span::before
+{
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/NQPyTE6.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-spectrum_5 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(100%) drop-shadow(0px 0px 1px black);
+}
+
+/* SPECTRUM 6*/
+
+.sheet-spectrum_6 {
+    white-space: nowrap;
+}
+
+.sheet-spectrum_6 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 65px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -34.5px;
+}
+
+
+.sheet-spectrum_6 input[type="checkbox"] + span::before
+{
+    width: 65px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/hUJa6v7.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-spectrum_6 input[type="checkbox"]:checked + span::before
+{
+    filter: brightness(100%) drop-shadow(0px 0px 1px black);
+}
+
+/* STATUS SPECTRUM -------------------------------------------------------- END */
+
+/* DUMMY SPECTRUM -------------------------------------------------------- START */
+
+/* DUMMY 1*/
+
+.sheet-dummy_1 {
+    white-space: nowrap;
+}
+
+.sheet-dummy_1 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 40px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -20px;
+}
+
+
+.sheet-dummy_1 input[type="checkbox"] + span::before
+{
+    width: 40px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/0vMVV6y.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-dummy_1 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(80%) drop-shadow(0px 0px 1px black);
+}
+
+/* DUMMY 2*/
+
+.sheet-dummy_2 {
+    white-space: nowrap;
+}
+
+.sheet-dummy_2 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 45px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -25px;
+}
+
+
+.sheet-dummy_2 input[type="checkbox"] + span::before
+{
+    width: 45px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/2fxghce.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-dummy_2 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(80%) drop-shadow(0px 0px 1px black);
+}
+
+/* DUMMY 3*/
+
+.sheet-dummy_3 {
+    white-space: nowrap;
+}
+
+.sheet-dummy_3 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 50px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -27px;
+}
+
+
+.sheet-dummy_3 input[type="checkbox"] + span::before
+{
+    width: 50px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/kyHIHoq.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-dummy_3 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(80%) drop-shadow(0px 0px 1px black);
+}
+
+/* DUMMY 4*/
+
+.sheet-dummy_4 {
+    white-space: nowrap;
+}
+
+.sheet-dummy_4 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 55px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -29.5px;
+}
+
+
+.sheet-dummy_4 input[type="checkbox"] + span::before
+{
+    width: 55px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/xWbiwPh.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-dummy_4 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(80%) drop-shadow(0px 0px 1px black);
+}
+
+/* DUMMY 5*/
+
+.sheet-spectrum_5 {
+    white-space: nowrap;
+}
+
+.sheet-dummy_5 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -32px;
+}
+
+
+.sheet-dummy_5 input[type="checkbox"] + span::before
+{
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/NQPyTE6.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-dummy_5 input[type="checkbox"]:checked + span::before
+{
+    opacity: 1;
+    filter: brightness(80%) drop-shadow(0px 0px 1px black);
+}
+
+/* DUMMY 6*/
+
+.sheet-dummy_6 {
+    white-space: nowrap;
+}
+
+.sheet-dummy_6 input[type="checkbox"]
+{
+    opacity: 0.0;
+    width: 65px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    margin: -34.5px;
+}
+
+
+.sheet-dummy_6 input[type="checkbox"] + span::before
+{
+    width: 65px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content: url(http://i.imgur.com/hUJa6v7.png);
+    filter: brightness(50%) drop-shadow(0px 0px 1px black);
+}
+
+.sheet-dummy_6 input[type="checkbox"]:checked + span::before
+{
+    filter: brightness(80%) drop-shadow(0px 0px 1px black);
+}
+
